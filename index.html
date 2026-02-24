@@ -10,9 +10,9 @@
 
     :root {
       --bg: #0d1b2a;
-      --border: #1e3048;
+      --border: #1e3a52;
       --text: #e2eaf4;
-      --muted: #5a7a9a;
+      --muted: #6b90b0;
       --green: #4ade80;
     }
 
@@ -24,11 +24,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
+      padding: 3rem 2rem;
     }
 
     .container {
-      max-width: 480px;
+      max-width: 680px;
       width: 100%;
       animation: fadeIn 0.6s ease both;
     }
@@ -43,12 +43,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 3.5rem;
+      margin-bottom: 4rem;
     }
 
     .monogram {
       font-family: 'Space Mono', monospace;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--muted);
       letter-spacing: 0.05em;
     }
@@ -57,56 +57,59 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 0.72rem;
+      font-size: 0.78rem;
       color: var(--muted);
       letter-spacing: 0.04em;
     }
 
     .dot {
-      width: 6px; height: 6px;
+      width: 7px; height: 7px;
       border-radius: 50%;
       background: var(--green);
-      box-shadow: 0 0 6px var(--green);
+      box-shadow: 0 0 8px var(--green);
       animation: pulse 2s ease infinite;
+      flex-shrink: 0;
     }
 
     @keyframes pulse {
       0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+      50% { opacity: 0.35; }
     }
 
     /* Hero */
     .hero { margin-bottom: 2.5rem; }
 
     .name {
-      font-size: 2rem;
+      font-size: 2.8rem;
       font-weight: 300;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-      margin-bottom: 0.4rem;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.6rem;
+      color: #f0f6ff;
     }
 
     .role {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 400;
       color: var(--muted);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
     /* Bio */
     .bio {
-      font-size: 0.92rem;
+      font-size: 1rem;
       font-weight: 300;
-      line-height: 1.85;
+      line-height: 1.9;
       color: #7a9bbf;
-      margin-bottom: 3rem;
-      border-left: 1px solid var(--border);
-      padding-left: 1.25rem;
+      margin-bottom: 3.5rem;
+      border-left: 2px solid var(--border);
+      padding-left: 1.5rem;
+      max-width: 520px;
     }
 
     .bio em {
-      color: #b0c8e0;
+      color: #b0cce8;
       font-style: normal;
     }
 
@@ -120,7 +123,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem 0;
+      padding: 1.2rem 0;
       border-top: 1px solid var(--border);
       text-decoration: none;
       color: var(--text);
@@ -129,65 +132,68 @@
 
     .link-item:last-child { border-bottom: 1px solid var(--border); }
 
-    .link-item:hover { padding-left: 8px; }
+    .link-item:hover { padding-left: 10px; }
     .link-item:hover .link-name { color: #fff; }
     .link-item:hover .arrow { color: #fff; transform: translateX(4px); }
 
     .link-left {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
     .link-num {
       font-family: 'Space Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--muted);
-      width: 20px;
+      font-size: 0.68rem;
+      color: var(--border);
+      width: 22px;
+      flex-shrink: 0;
     }
 
     .link-name {
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 400;
       color: #c8ddef;
       transition: color 0.2s;
+      margin-bottom: 0.15rem;
     }
 
     .link-sub {
-      font-size: 0.72rem;
+      font-size: 0.78rem;
       color: var(--muted);
-      margin-top: 0.15rem;
     }
 
     .arrow {
-      font-size: 0.85rem;
+      font-size: 1rem;
       color: var(--muted);
       transition: all 0.2s ease;
+      flex-shrink: 0;
     }
 
     .tag {
-      font-size: 0.62rem;
-      letter-spacing: 0.08em;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
       border: 1px solid var(--border);
-      border-radius: 2px;
-      padding: 2px 7px;
+      border-radius: 3px;
+      padding: 3px 8px;
       font-family: 'Space Mono', monospace;
     }
 
     /* Footer */
     .footer {
-      margin-top: 3rem;
-      font-size: 0.68rem;
-      color: #1e3048;
-      letter-spacing: 0.06em;
+      margin-top: 3.5rem;
+      font-size: 0.7rem;
+      color: var(--border);
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       font-family: 'Space Mono', monospace;
     }
 
-    @media (max-width: 480px) {
-      .name { font-size: 1.6rem; }
+    @media (max-width: 520px) {
+      .name { font-size: 2rem; }
+      .bio { font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -234,11 +240,21 @@
         <span class="tag">soon</span>
       </div>
 
-      <a class="link-item" href="/cdn-cgi/l/email-protection#2a4f474344591b121f1c6a4d474b434604494547">
+      <a class="link-item" href="mailto:emins1856@gmail.com">
         <div class="link-left">
           <span class="link-num">03</span>
           <div>
             <div class="link-name">Email</div>
-            <div class="link-sub"><span class="__cf_email__" data-cfemail="16737b7f7865272e232056717b777f7a3875797b">[email&#160;protected]</span></div>
+            <div class="link-sub">emins1856@gmail.com</div>
           </div>
         </div>
+        <span class="arrow">↗</span>
+      </a>
+
+    </div>
+
+    <div class="footer">Vilnius · 2025</div>
+
+  </div>
+</body>
+</html>
