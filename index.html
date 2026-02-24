@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emin Samadov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0a;
+      --border: #1f1f1f;
+      --text: #e8e8e8;
+      --muted: #555;
+      --green: #4ade80;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 480px;
+      width: 100%;
+      animation: fadeIn 0.6s ease both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Top bar */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3.5rem;
+    }
+
+    .monogram {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 6px var(--green);
+      animation: pulse 2s ease infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* Hero */
+    .hero { margin-bottom: 2.5rem; }
+
+    .name {
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.4rem;
+    }
+
+    .role {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* Bio */
+    .bio {
+      font-size: 0.92rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: #888;
+      margin-bottom: 3rem;
+      border-left: 1px solid var(--border);
+      padding-left: 1.25rem;
+    }
+
+    .bio em {
+      color: #bbb;
+      font-style: normal;
+    }
+
+    /* Links */
+    .links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-top: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s ease;
+    }
+
+    .link-item:last-child { border-bottom: 1px solid var(--border); }
+
+    .link-item:hover { padding-left: 8px; }
+    .link-item:hover .link-name { color: #fff; }
+    .link-item:hover .arrow { color: #fff; transform: translateX(4px); }
+
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .link-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      width: 20px;
+    }
+
+    .link-name {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #ccc;
+      transition: color 0.2s;
+    }
+
+    .link-sub {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+    }
+
+    .arrow {
+      font-size: 0.85rem;
+      color: var(--muted);
+      transition: all 0.2s ease;
+    }
+
+    .tag {
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 2px 7px;
+      font-family: 'Space Mono', monospace;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.68rem;
+      color: #333;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-family: 'Space Mono', monospace;
+    }
+
+    @media (max-width: 480px) {
+      .name { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="topbar">
+      <span class="monogram">ES_</span>
+      <span class="status"><span class="dot"></span> Open to opportunities</span>
+    </div>
+
+    <div class="hero">
+      <h1 class="name">Emin Samadov</h1>
+      <p class="role">Software Engineering · Vilnius University</p>
+    </div>
+
+    <p class="bio">
+      Third-year Software Engineering student from <em>Azerbaijan</em>, based in <em>Lithuania</em>.
+      I enjoy creating practical projects with clean, maintainable code.
+      Always learning and growing, one step at a time.
+    </p>
+
+    <div class="links">
+
+      <a class="link-item" href="https://github.com/emins1856" target="_blank" rel="noopener">
+        <div class="link-left">
+          <span class="link-num">01</span>
+          <div>
+            <div class="link-name">GitHub</div>
+            <div class="link-sub">emins1856 · code & projects</div>
+          </div>
+        </div>
+        <span class="arrow">↗</span>
+      </a>
+
+      <div class="link-item" style="opacity:0.4; cursor: not-allowed;">
+        <div class="link-left">
+          <span class="link-num">02</span>
+          <div>
+            <div class="link-name">Resume</div>
+            <div class="link-sub">PDF · coming soon</div>
+          </div>
+        </div>
+        <span class="tag">soon</span>
+      </div>
+
+      <a class="link-item" href="mailto:emins1856@gmail.com">
+        <div class="link-left">
+          <span class="link-num">03</span>
+          <div>
+            <div class="link-name">Email</div>
+            <div class="link-sub">emins1856@gmail.com</div>
+          </div>
+        </div>
+        <span class="arrow">↗</span>
+      </a>
+
+    </div>
+
+    <div class="footer">Vilnius · 2025</div>
+
+  </div>
+</body>
+</html>
